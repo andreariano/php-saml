@@ -1,6 +1,6 @@
 <?php
 
-    $spBaseUrl = 'https://2d85b3b9.ngrok.io'; //or http://<your_domain>
+    $spBaseUrl = 'https://8c467f87.ngrok.io'; //or http://<your_domain>
 
     $settingsInfo = array (
         'sp' => array (
@@ -14,37 +14,15 @@
             'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
         ),
         'idp' => array (
-            'entityId' => 'https://app.onelogin.com/saml/metadata/5074bb37-0ad2-4180-a53f-07a08cd1233f',
+            'entityId' => 'https://login.beedoo.com.br/FederationMetadata/2007-06/FederationMetadata.xml',
             'singleSignOnService' => array (
-                'url' => 'https://andreariano-dev.onelogin.com/trust/saml2/http-post/sso/846367',
+                'url' => 'https://login.beedoo.com.br/adfs/ls',
             ),
             'singleLogoutService' => array (
-                'url' => 'https://andreariano-dev.onelogin.com/trust/saml2/http-redirect/slo/846367',
+                'url' => 'https://login.beedoo.com.br/adfs/ls',
             ),
             'x509cert' => '-----BEGIN CERTIFICATE-----
-            MIIEHTCCAwWgAwIBAgIUF8HCJoNMcecH8hIYQeqQmnm5GIQwDQYJKoZIhvcNAQEF
-            BQAwWjElMCMGA1UECgwcUHJvZ3JhbW1lcnMgSW5mb3JtYXRpY2EgTFREQTEVMBMG
-            A1UECwwMT25lTG9naW4gSWRQMRowGAYDVQQDDBFPbmVMb2dpbiBBY2NvdW50IDAe
-            Fw0xODEwMDkyMTI4NTRaFw0yMzEwMDkyMTI4NTRaMFoxJTAjBgNVBAoMHFByb2dy
-            YW1tZXJzIEluZm9ybWF0aWNhIExUREExFTATBgNVBAsMDE9uZUxvZ2luIElkUDEa
-            MBgGA1UEAwwRT25lTG9naW4gQWNjb3VudCAwggEiMA0GCSqGSIb3DQEBAQUAA4IB
-            DwAwggEKAoIBAQCn12pjUBL01cVomyn7EfQ/i8gCmqTdNyCYXDG2dhSzLYGKKKIF
-            uFxyOqnAA/5G8/idXIFD4Es/87mgWXFxdGx3ucZ+vyaL9RWOAaJbfXFx8VRUM6YU
-            hyuK1T0+EkFVT2Nw+vrQQ+BEjhvKUbv5lbNaf1dbmj/tJKfCwJQ4aLV7kSza1eQ5
-            WucWw49tckvXOItJlrjMqojgDbDvDlMZIGBp0IrjodQPBvy29VbE597MCPhcLpcl
-            2RilVevmKhC89m26VRFBEQuW/c600DW75inc/TGmiw/ZuLXMtK9o9zLVmUybzNET
-            DSYmd3OBjmeM0Z6Se8G5ZhoPKkXjMovelJAVAgMBAAGjgdowgdcwDAYDVR0TAQH/
-            BAIwADAdBgNVHQ4EFgQUNvTkkgqARE+BL02IkV11vGyXVJcwgZcGA1UdIwSBjzCB
-            jIAUNvTkkgqARE+BL02IkV11vGyXVJehXqRcMFoxJTAjBgNVBAoMHFByb2dyYW1t
-            ZXJzIEluZm9ybWF0aWNhIExUREExFTATBgNVBAsMDE9uZUxvZ2luIElkUDEaMBgG
-            A1UEAwwRT25lTG9naW4gQWNjb3VudCCCFBfBwiaDTHHnB/ISGEHqkJp5uRiEMA4G
-            A1UdDwEB/wQEAwIHgDANBgkqhkiG9w0BAQUFAAOCAQEAa8tyEu2JSOrYOrrgzxEt
-            jaqiHF16IHHtK1ialTSQ9yS69cpZu6rXCzcqhh6XLClHK6Y6qPj9jKwT3R9Bp6VE
-            MOzMUghk+AdFrQuJ3vtv2Z7A8BUk4sRqksjpOepsB+fg83T13xRcIhE3vT3m4PW1
-            SfJsQr1FTmUKti02FPaVB6369b5RAX//aGhSzlHFyGxe8BgT2f2wILFoRWvmyySO
-            ktEaqkAFWDS8HMATSKzWamFbuqaiqyc4IOfUCUbRIJR8cST0eBuVAeAVmuIAmZ7h
-            nhm3oqUxFOUxbRVAThJ4MIbUhj4YZUi4Vm9OC82oxDTjV2RPmaP9ZynyymX/VDvE
-            IQ==
+            MIIC4jCCAcqgAwIBAgIQJHSGodvTn4hCcm6HPKNj5jANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDEyJBREZTIFNpZ25pbmcgLSBsb2dpbi5iZWVkb28uY29tLmJyMB4XDTE4MDgxNjAzMjI1NFoXDTE5MDgxNjAzMjI1NFowLTErMCkGA1UEAxMiQURGUyBTaWduaW5nIC0gbG9naW4uYmVlZG9vLmNvbS5icjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALwE85Mr6LjeQrSpB3C7X6kOj6JvQFk0hIuAT8aS++uJxilTusX1sOaXeWRuvXbWEo38bEMZybedIzM1sVxoNq0VmnZzFzCIMSWBzqc88wUDHX+zY8ajOgIHA93/Q8WYl7T20g41OBStO5t+y8ulFvAn2cg24HgHWZaGD27m/mFCqeXN3DSWx9dRu+399J/fyv+JCTMQP3vCdQCN9v7SPQ76eSu2LnbWTL4wsvksO6Y24meG4m1i84f829bJPBcLKPHA3GK/Jmw7M9j+gC96FimJnMJUEmZA6tynYaLwUksc7ro7yiw3/FakxosnpWFJNDLqgSl4unBtmYLWMO2FNOMCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAXM187h+t634ghq6FFCMuG0FQ+Xn0FiSG7qS5C0EtX180NUdeCnHtOXOUIYkSbpVcQXsIRuwJ/h5F9b7WLZPA1zD7FWlXWxjipZC9u5lUy76rxpE44zxNqxSCPEHgGaBrFy6sy8h4wjdfzyMUDADCkP1D/UjDogsWK+1COgPvZcnfL60LrILVVBcFQGWPdsq2zw/iXXHZi1+zkm4MDfl/pJkjQf9CdMi29MW4tqy3zblbtAUVPzQMnE5g59EtgfZ2bsidUYJ3Ipnbwl/5+U969i21O2MEk4vtHTxIvaEJ+FhKdVXsRb8qRbG3MCUoWqw5bm0ep/2Rr4yyDzN1q9ozfw==
             -----END CERTIFICATE-----
             ',
         ),
